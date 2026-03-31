@@ -20,32 +20,3 @@
 1.  При пополнении баланса API высчитывает остаток до цели.
 2.  Если условие `currentAmount >= targetAmount` выполняется, инициируется вызов метода `telegramService.sendWinMessage()`.
 3.  Пользователь получает сообщение: *"Поздравляю! Цель [Название] достигнута! 🚗"*
-
----
-
-## 🚀 Как запустить (Development)
-
-1.  **Клонировать репозиторий:**
-    ```bash
-    git clone [https://github.com/your-username/smart-piggy-api.git](https://github.com/your-username/smart-piggy-api.git)
-    ```
-2.  **Собрать проект (Maven):**
-    ```bash
-    ./mvnw clean install
-    ```
-3.  **Запустить приложение:**
-    ```bash
-    ./mvnw spring-boot:run
-    ```
-
-API будет доступно по адресу: `http://localhost:8080`
-
----
-
-## 🧪 Примеры запросов (cURL)
-
-**Пополнить копилку:**
-```bash
-curl -X POST http://localhost:8080/api/income \
-     -H "Content-Type: application/json" \
-     -d '{"amount": 500}'
